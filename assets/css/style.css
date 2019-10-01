@@ -59,14 +59,54 @@ body {
     height: 100%;
     width: 100%;
     margin: 0% 2%;
+    position: relative;
 }
 
 .back-card {
+    background-image: url('../images/lfz-card.jpg');
+    background-size: cover;
+    background-position: center center;
     height: 100%;
     width: 100%;
-    background-image: url('./assets/images/lfz-card.jpg');
+    position: absolute;
 }
 
-.image {
-    background-color: cornflowerblue;
+.meeSeeks1 {
+    background-image: url('../images/MeSeeks/MeeSeeks1.jpg');
+}
+.meeSeeks2 {
+    background-image: url('../images/MeSeeks/MeeSeeks2.png');
+}
+.meeSeeks3 {
+    background-image: url('../images/MeSeeks/MeeSeeks3.png');
+}
+.meeSeeks4 {
+    background-image: url('../images/MeSeeks/MeeSeeks4.png');
+}
+.meeSeeks5 {
+    background-image: url('../images/MeSeeks/MeeSeeks5.png');
+}
+.meeSeeks6 {
+    background-image: url('../images/MeSeeks/MeeSeeks6.png');
+}
+.meeSeeks7 {
+    background-image: url('../images/MeSeeks/MeeSeeks7.png');
+}
+.meeSeeks8 {
+    background-image: url('../images/MeSeeks/MeeSeeks8.png');
+}
+
+.meeSeeks9 {
+    background-image: url('../images/MeSeeks/MeeSeeks9.png');
+}
+
+.meeSeeks1, .meeSeeks2, .meeSeeks3, .meeSeeks4, .meeSeeks5, .meeSeeks6, .meeSeeks7, .meeSeeks8, .meeSeeks9 {
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+}
+
+.hidden {
+    display: none;
 }
