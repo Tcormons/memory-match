@@ -62,8 +62,9 @@ body {
 }
 
 .back-card {
-    background-color: violet;
-
+    height: 100%;
+    width: 100%;
+    background-image: url('./assets/images/lfz-card.jpg');
 }
 
 .image {
