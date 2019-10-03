@@ -10,6 +10,7 @@ body {
     width: 100%;
     display: flex;
     position: relative;
+    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.493);
 }
 
 .banner {
@@ -32,6 +33,7 @@ body {
     background-color: red;
     width:20%;
     text-align: center;
+    padding-top: 1%;
 }
 
 .stats {
@@ -43,17 +45,19 @@ body {
 }
 
 .main {
-    background-color: cadetblue;
+    background-image: url('../images/background.png');
+    background-size: cover;
+    background-position: center center;
     width: 80%;
     height:100%;
 }
 
 .container {
-    background-color: orange;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .secondary_container {
@@ -84,6 +88,9 @@ body {
     height: 100%;
     width: 100%;
     position: absolute;
+    box-shadow: 2px 2px 3px 2px rgba(255, 21, 0, 0.465);
+    border: 2px groove rgba(28,110,164,0.86);
+    border-radius: 14px;
 }
 
 .meeSeeks1 {
@@ -120,14 +127,29 @@ body {
     background-position: center center;
     height: 100%;
     width: 100%;
+    box-shadow: 2px 2px 3px 2px rgba(251, 34, 14, 0.465);
+    border: 2px groove rgba(255, 255, 255, 0.86);
+    border-radius: 14px;
 }
 
 .hidden {
     display: none;
 }
 
+.disappear {
+    visibility: hidden;
+}
+
 .modal {
-    height: 100%;
-    width: 100%;
-    background-color: green;
+    background-image: url('../images/victory.jpg');
+    border-radius: 30%;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: 0 0 100px rgba(100, 251, 13, 0.993);
+    height: 50%;
+    width: 50%;
+    top: 20%;
+    left: 20%;
+    position: absolute;
+    z-index: 99;
 }
