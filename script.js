@@ -7,16 +7,16 @@ function intializApp() {
 
 var firstCardClicked = null;
 var secondCardClicked = null;
-var matches = null;
 var firstCardCompare = null;
 var secondCardCompare = null;
+var matches = null;
+var maxMatches = 9;
 
 function handleCardClick(event) {
   $(event.currentTarget).find('.back-card').addClass('hidden');
 }
 
 function cardFlip(event) {
-  // debugger;
   if (firstCardClicked === null) {
     firstCardClicked = $(event.currentTarget);
     firstCardCompare = firstCardClicked.find('.front').css('background-image');
@@ -29,19 +29,32 @@ function cardFlip(event) {
   if (secondCardCompare == null) {
     console.log("Pick a second card");
   } else if (firstCardCompare === secondCardCompare) {
-    matches++;
     console.log("You have a match");
-    firstCardClicked = null;
-    secondCardClicked = null;
+    setTimeout(completedPair, 300);
   } else {
-    setTimeout(misMatch, 1500);
+    $('.card').unbind('click');
+    setTimeout(misMatch, 500);
   }
 }
 
+function completedPair(){
+  matches++;
+
+  firstCardClicked.addClass('disappear');
+  secondCardClicked.addClass('disappear');
+  firstCardClicked = null;
+  secondCardClicked = null;
+  if (matches === maxMatches) {
+    var modal = $('<div>').addClass('modal');
+    $('.container').prepend(modal);
+  }
+}
 function misMatch() {
-  // debugger;
   firstCardClicked.find('.back-card').removeClass('hidden');
   secondCardClicked.find('.back-card').removeClass('hidden');
   firstCardClicked = null;
   secondCardClicked = null;
+  // Re-apply click handlers
+  $('.card').on('click', handleCardClick);
+  $('.card').on('click', cardFlip);
 }
