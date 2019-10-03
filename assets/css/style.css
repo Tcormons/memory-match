@@ -5,7 +5,7 @@ body {
 .header {
     background-image: url('../images/MeSeeks/banner.jpg');
     background-size: cover;
-    background-position: center center;
+    background-position-y: 30%;
     height: 20vh;
     width: 100%;
     display: flex;
@@ -14,7 +14,7 @@ body {
 }
 
 .banner {
-    height: 30%;
+    height: 50%;
     width: 40%;
     position: absolute;
     left: 30%;
@@ -42,6 +42,19 @@ body {
     height: 100%;
     margin: 2% 5%;
     align-content: center;
+    box-shadow: 2px 2px 3px 2px rgba(251, 34, 14, 0.465);
+    border: 2px groove rgba(255, 255, 255, 0.86);
+    border-radius: 14px;
+}
+
+.label { /*contains stats-words */
+    font-size: 3rem;
+    font-family: Comic Sans MS;
+    vertical-align: 5rem;
+}
+
+#gamesPlayed, #attempts, #accuracy { /*contains calculated stats*/
+
 }
 
 .main {
@@ -70,14 +83,14 @@ body {
 
 .row {
     display: flex;
-    margin: 2% 0%;
+    margin: 1% 0%;
     height: 100%;
 }
 
 .card {
     height: 100%;
     width: 100%;
-    margin: 0% 2%;
+    margin: 0% 1%;
     position: relative;
 }
 
@@ -146,6 +159,7 @@ body {
     background-size: cover;
     background-position: center center;
     box-shadow: 0 0 100px rgba(100, 251, 13, 0.993);
+    border: 5px groove rgba(28,110,164,0.86);
     height: 50%;
     width: 50%;
     top: 20%;
