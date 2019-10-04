@@ -1,6 +1,7 @@
 $(document).ready(intializApp);
 
 function intializApp() {
+  randomLocation();
   $('.card').on('click', handleCardClick);
   $('.card').on('click', cardFlip);
 }
@@ -13,6 +14,29 @@ var matches = 0;
 var maxMatches = 9;
 var attempts = 0;
 var gamesPlayed = 0;
+
+var gallery = [
+  '/Users/Tcormons/Desktop/lfz/memory_match/assets/images/MeSeeks/MeeSeeksCards/MeeSeeks1.jpg',
+  '/Users/Tcormons/Desktop/lfz/memory_match/assets/images/MeSeeks/MeeSeeksCards/MeeSeeks1.jpg',
+  '/Users/Tcormons/Desktop/lfz/memory_match/assets/images/MeSeeks/MeeSeeksCards/MeeSeeks2.jpg',
+  '/Users/Tcormons/Desktop/lfz/memory_match/assets/images/MeSeeks/MeeSeeksCards/MeeSeeks2.jpg',
+  '/Users/Tcormons/Desktop/lfz/memory_match/assets/images/MeSeeks/MeeSeeksCards/MeeSeeks3.jpg',
+  '/Users/Tcormons/Desktop/lfz/memory_match/assets/images/MeSeeks/MeeSeeksCards/MeeSeeks3.jpg',
+  '/Users/Tcormons/Desktop/lfz/memory_match/assets/images/MeSeeks/MeeSeeksCards/MeeSeeks4.jpg',
+  '/Users/Tcormons/Desktop/lfz/memory_match/assets/images/MeSeeks/MeeSeeksCards/MeeSeeks4.jpg',
+  '/Users/Tcormons/Desktop/lfz/memory_match/assets/images/MeSeeks/MeeSeeksCards/MeeSeeks5.jpg',
+  '/Users/Tcormons/Desktop/lfz/memory_match/assets/images/MeSeeks/MeeSeeksCards/MeeSeeks5.jpg',
+  '/Users/Tcormons/Desktop/lfz/memory_match/assets/images/MeSeeks/MeeSeeksCards/MeeSeeks6.jpg',
+  '/Users/Tcormons/Desktop/lfz/memory_match/assets/images/MeSeeks/MeeSeeksCards/MeeSeeks6.jpg',
+  '/Users/Tcormons/Desktop/lfz/memory_match/assets/images/MeSeeks/MeeSeeksCards/MeeSeeks7.jpg',
+  '/Users/Tcormons/Desktop/lfz/memory_match/assets/images/MeSeeks/MeeSeeksCards/MeeSeeks7.jpg',
+  '/Users/Tcormons/Desktop/lfz/memory_match/assets/images/MeSeeks/MeeSeeksCards/MeeSeeks8.jpg',
+  '/Users/Tcormons/Desktop/lfz/memory_match/assets/images/MeSeeks/MeeSeeksCards/MeeSeeks8.jpg',
+  '/Users/Tcormons/Desktop/lfz/memory_match/assets/images/MeSeeks/MeeSeeksCards/MeeSeeks9.jpg',
+  '/Users/Tcormons/Desktop/lfz/memory_match/assets/images/MeSeeks/MeeSeeksCards/MeeSeeks9.jpg'
+]
+
+
 
 function handleCardClick(event) {
   $(event.currentTarget).find('.back-card').addClass('hidden');
@@ -110,14 +134,43 @@ function displayGameOver() {
 }
 
 function retryGame() {
-  // debugger;
   attempts = 0;
   matches = 0;
-  calculateAccuracy = 0;
+  $('#accuracy').text('00.0%');
 
-  $('.back-card').removeClass('hidden');
-  $('.card').removeClass('disappear');
+  $('.row').addClass('hidden');
 
   $('.modal').remove();
   $('.retry').remove();
+  randomLocation();
+}
+
+function randomLocation() {
+
+  // randomizes gallery
+  for (var index = gallery.length - 1; index > 0; index--) {
+    var randomNumber = Math.floor(Math.random() * index);
+    var tempNumber = gallery[index];
+    gallery[index] = gallery[randomNumber];
+    gallery[randomNumber] = tempNumber;
+  }
+
+//dynamically creates cards
+  for (var displayIndex = 0; displayIndex < gallery.length; displayIndex++) {
+    var string = gallery[displayIndex];
+    var secondNewDiv = $('<div>');
+    secondNewDiv.addClass('front');
+    secondNewDiv.css('background-image', 'url(' + string + ')');
+    var newDiv = $('<div>').addClass('card');
+    var firstNewDiv = $('<div>').addClass('back-card');
+
+    if (displayIndex === 0 || displayIndex === 6 || displayIndex === 12) {
+      var newRow = $('<row>').addClass('row');
+    }
+
+    newDiv.append(firstNewDiv);
+    newDiv.append(secondNewDiv);
+    newRow.append(newDiv);
+    $('.container').append(newRow);
+  }
 }
