@@ -27,10 +27,13 @@ body {
     display: flex;
     height: 80vh;
     width: 100vw;
+    background-image: url('../images/background1.png');
+    background-size: cover;
+    background-position: bottom;
+    background-position-y: 70%;
 }
 
 .aside {
-    background-color: red;
     width:20%;
     text-align: center;
     padding-top: 1%;
@@ -50,17 +53,15 @@ body {
 .label { /*contains stats-words */
     font-size: 3rem;
     font-family: Comic Sans MS;
-    vertical-align: 5rem;
+    vertical-align: middle;
 }
 
 #gamesPlayed, #attempts, #accuracy { /*contains calculated stats*/
-
+    font-size: 3rem;
+    font-family: Comic Sans MS;
 }
 
 .main {
-    background-image: url('../images/background.png');
-    background-size: cover;
-    background-position: center center;
     width: 80%;
     height:100%;
 }
@@ -95,7 +96,8 @@ body {
 }
 
 .back-card {
-    background-image: url('../images/lfz-card.jpg');
+    background-color: cadetblue;
+    background-image: url('../images/portalCard.gif');
     background-size: cover;
     background-position: center center;
     height: 100%;
