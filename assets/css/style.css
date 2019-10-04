@@ -41,10 +41,12 @@ body {
 
 .stats {
     background-color: cadetblue;
-    display: block;
+    display: flex;
     height: 100%;
     margin: 2% 5%;
     align-content: center;
+    justify-content: center;
+    align-items: center;
     box-shadow: 2px 2px 3px 2px rgba(251, 34, 14, 0.465);
     border: 2px groove rgba(255, 255, 255, 0.86);
     border-radius: 14px;
@@ -53,7 +55,7 @@ body {
 .label { /*contains stats-words */
     font-size: 3rem;
     font-family: Comic Sans MS;
-    vertical-align: middle;
+
 }
 
 #gamesPlayed, #attempts, #accuracy { /*contains calculated stats*/

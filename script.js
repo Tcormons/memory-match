@@ -3,6 +3,8 @@ $(document).ready(intializApp);
 function intializApp() {
   $('.card').on('click', handleCardClick);
   $('.card').on('click', cardFlip);
+  //flipping animation not working
+  $('.card').on('click', cardAnimation);
 }
 
 var firstCardClicked = null;
@@ -93,7 +95,8 @@ function calculateAccuracy(){
 function displayStats(){
   // debugger;
 
-  var accuracy = calculateAccuracy();
+  var accuracy = calculateAccuracy() * 100;
+  var accuracyPerc = accuracy.toFixed(1) ;
 
   var gameDiv = $('#gamesPlayed');
   var attemptDiv = $('#attempts');
@@ -101,6 +104,11 @@ function displayStats(){
 
   gameDiv.text(gamesPlayed);
   attemptDiv.text(attempts);
-  accuracyDiv.text(accuracy);
+  accuracyDiv.text(accuracyPerc + "%");
 
+}
+
+//flipping animation not working
+function cardAnimation (event) {
+  event.addClass('.rotate');
 }
