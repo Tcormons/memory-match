@@ -3,8 +3,6 @@ $(document).ready(intializApp);
 function intializApp() {
   $('.card').on('click', handleCardClick);
   $('.card').on('click', cardFlip);
-  //flipping animation not working
-  $('.card').on('click', cardAnimation);
 }
 
 var firstCardClicked = null;
@@ -31,7 +29,7 @@ function cardFlip(event) {
     secondCardCompare = secondCardClicked.find('.front').css('background-image');
 
     // check for double click on same firstCard
-    if (firstCardClicked.is(secondCardClicked)){
+    if (firstCardClicked.is(secondCardClicked)) {
       secondCardClicked = null;
       console.log('You need to pick a second card');
       return;
@@ -43,7 +41,8 @@ function cardFlip(event) {
     console.log("You have a match");
     $('.card').unbind('click');
     setTimeout(removeCompletedPair, 300);
-    attempts ++;
+    attempts++;
+    matches++;
     displayStats();
   }
   // Mismatch
@@ -51,17 +50,16 @@ function cardFlip(event) {
     console.log('Try again');
     $('.card').unbind('click');
     setTimeout(handleMisMatch, 500);
-    attempts ++;
+    attempts++;
     displayStats();
   }
 }
 
-function removeCompletedPair(){
+function removeCompletedPair() {
   firstCardClicked.addClass('disappear');
   secondCardClicked.addClass('disappear');
   firstCardClicked = null;
   secondCardClicked = null;
-  matches++;
 
   // Re-apply click handlers
   $('.card').on('click', handleCardClick);
@@ -69,10 +67,9 @@ function removeCompletedPair(){
 
   // completed game condition
   if (matches === maxMatches) {
-    var modal = $('<div>').addClass('modal');
-    $('.container').prepend(modal);
-    gamesPlayed ++;
+    gamesPlayed++;
     displayStats();
+    displayGameOver();
   }
 }
 
@@ -87,28 +84,40 @@ function handleMisMatch() {
   $('.card').on('click', cardFlip);
 }
 
-function calculateAccuracy(){
-  var calcAccuracy = matches/attempts;
-  return calcAccuracy;
+function calculateAccuracy() {
+  var calcAccuracy = matches / attempts;
+  var accuracy = (calcAccuracy * 100).toFixed(1) + '%';
+  return accuracy;
 }
 
-function displayStats(){
-  // debugger;
-
-  var accuracy = calculateAccuracy() * 100;
-  var accuracyPerc = accuracy.toFixed(1) ;
-
+function displayStats() {
   var gameDiv = $('#gamesPlayed');
   var attemptDiv = $('#attempts');
   var accuracyDiv = $('#accuracy');
 
   gameDiv.text(gamesPlayed);
   attemptDiv.text(attempts);
-  accuracyDiv.text(accuracyPerc + "%");
-
+  accuracyDiv.text(calculateAccuracy);
 }
 
-//flipping animation not working
-function cardAnimation (event) {
-  event.addClass('.rotate');
+function displayGameOver() {
+  var retry = $('<div>').addClass('retry').text("Retry");
+  $('.container').prepend(retry);
+  var modal = $('<div>').addClass('modal');
+  $('.container').prepend(modal);
+
+  $('.retry').on('click', retryGame);
+}
+
+function retryGame() {
+  // debugger;
+  attempts = 0;
+  matches = 0;
+  calculateAccuracy = 0;
+
+  $('.back-card').removeClass('hidden');
+  $('.card').removeClass('disappear');
+
+  $('.modal').remove();
+  $('.retry').remove();
 }

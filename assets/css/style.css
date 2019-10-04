@@ -141,7 +141,7 @@ body {
 
 .meeSeeks1, .meeSeeks2, .meeSeeks3, .meeSeeks4, .meeSeeks5, .meeSeeks6, .meeSeeks7, .meeSeeks8, .meeSeeks9 {
     background-size: cover;
-    background-position: center center;
+    background-position-y: 65%;
     height: 100%;
     width: 100%;
     box-shadow: 2px 2px 3px 2px rgba(251, 34, 14, 0.465);
@@ -170,4 +170,24 @@ body {
     left: 20%;
     position: absolute;
     z-index: 99;
+}
+
+.retry {
+    height: 6%;
+    width: 15%;
+    top: 5%;
+    left: 38%;
+    position: absolute;
+    background-color: cadetblue;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 100px rgba(100, 251, 13, 0.993);
+    border: 5px groove rgba(28,110,164,0.86);
+    border-radius: 50%;
+    font-size: 2rem;
+    z-index: 99;
+    font-family: Comic Sans MS;
+    cursor: default;
 }
