@@ -137,6 +137,7 @@ function retryGame() {
   attempts = 0;
   matches = 0;
   $('#accuracy').text('00.0%');
+  $('#attempts').text('0');
 
   $('.row').addClass('hidden');
 
@@ -173,4 +174,6 @@ function randomLocation() {
     newRow.append(newDiv);
     $('.container').append(newRow);
   }
+  $('.card').on('click', handleCardClick);
+  $('.card').on('click', cardFlip);
 }
