@@ -98,7 +98,6 @@ function removeCompletedPair() {
 }
 
 function handleMisMatch() {
-  debugger;
   firstCardClicked.find('.back-card').removeClass('hidden');
   secondCardClicked.find('.back-card').removeClass('hidden');
   firstCardClicked = null;
