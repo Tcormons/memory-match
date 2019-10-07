@@ -2,8 +2,6 @@ $(document).ready(intializApp);
 
 function intializApp() {
   randomLocation();
-  $('.card').on('click', handleCardClick);
-  $('.card').on('click', cardFlip);
 }
 
 var firstCardClicked = null;
@@ -147,6 +145,7 @@ function retryGame() {
   randomLocation();
 }
 
+//DOM elements
 function randomLocation() {
 
   // randomizes gallery
