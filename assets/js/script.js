@@ -14,24 +14,24 @@ var attempts = 0;
 var gamesPlayed = 0;
 
 var gallery = [
-  '../assets/images/MeSeeks/MeeSeeksCards/MeeSeeks1.jpg',
-  '../assets/images/MeSeeks/MeeSeeksCards/MeeSeeks1.jpg',
-  '../assets/images/MeSeeks/MeeSeeksCards/MeeSeeks2.jpg',
-  '../assets/images/MeSeeks/MeeSeeksCards/MeeSeeks2.jpg',
-  '../assets/images/MeSeeks/MeeSeeksCards/MeeSeeks3.jpg',
-  '../assets/images/MeSeeks/MeeSeeksCards/MeeSeeks3.jpg',
-  '../assets/images/MeSeeks/MeeSeeksCards/MeeSeeks4.jpg',
-  '../assets/images/MeSeeks/MeeSeeksCards/MeeSeeks4.jpg',
-  '../assets/images/MeSeeks/MeeSeeksCards/MeeSeeks5.jpg',
-  '../assets/images/MeSeeks/MeeSeeksCards/MeeSeeks5.jpg',
-  '../assets/images/MeSeeks/MeeSeeksCards/MeeSeeks6.jpg',
-  '../assets/images/MeSeeks/MeeSeeksCards/MeeSeeks6.jpg',
-  '../assets/images/MeSeeks/MeeSeeksCards/MeeSeeks7.jpg',
-  '../assets/images/MeSeeks/MeeSeeksCards/MeeSeeks7.jpg',
-  '../assets/images/MeSeeks/MeeSeeksCards/MeeSeeks8.jpg',
-  '../assets/images/MeSeeks/MeeSeeksCards/MeeSeeks8.jpg',
-  '../assets/images/MeSeeks/MeeSeeksCards/MeeSeeks9.jpg',
-  '../assets/images/MeSeeks/MeeSeeksCards/MeeSeeks9.jpg'
+  '../images/MeSeeks/MeeSeeksCards/MeeSeeks1.jpg',
+  '../images/MeSeeks/MeeSeeksCards/MeeSeeks1.jpg',
+  '../images/MeSeeks/MeeSeeksCards/MeeSeeks2.jpg',
+  '../images/MeSeeks/MeeSeeksCards/MeeSeeks2.jpg',
+  '../images/MeSeeks/MeeSeeksCards/MeeSeeks3.jpg',
+  '../images/MeSeeks/MeeSeeksCards/MeeSeeks3.jpg',
+  '../images/MeSeeks/MeeSeeksCards/MeeSeeks4.jpg',
+  '../images/MeSeeks/MeeSeeksCards/MeeSeeks4.jpg',
+  '../images/MeSeeks/MeeSeeksCards/MeeSeeks5.jpg',
+  '../images/MeSeeks/MeeSeeksCards/MeeSeeks5.jpg',
+  '../images/MeSeeks/MeeSeeksCards/MeeSeeks6.jpg',
+  '../images/MeSeeks/MeeSeeksCards/MeeSeeks6.jpg',
+  '../images/MeSeeks/MeeSeeksCards/MeeSeeks7.jpg',
+  '../images/MeSeeks/MeeSeeksCards/MeeSeeks7.jpg',
+  '../images/MeSeeks/MeeSeeksCards/MeeSeeks8.jpg',
+  '../images/MeSeeks/MeeSeeksCards/MeeSeeks8.jpg',
+  '../images/MeSeeks/MeeSeeksCards/MeeSeeks9.jpg',
+  '../images/MeSeeks/MeeSeeksCards/MeeSeeks9.jpg'
 ]
 
 
