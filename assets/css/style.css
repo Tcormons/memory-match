@@ -37,6 +37,7 @@ body {
     width:20%;
     text-align: center;
     padding-top: 1%;
+    overflow: scroll;
 }
 
 .stats {
@@ -52,13 +53,15 @@ body {
     border-radius: 14px;
 }
 
-.label { /*contains stats-words */
-    font-size: 3rem;
+.label {
+    /*contains stats-words */
+    font-size: 2rem;
     font-family: Comic Sans MS;
 
 }
 
-#gamesPlayed, #attempts, #accuracy { /*contains calculated stats*/
+#gamesPlayed, #attempts, #accuracy {
+    /*contains calculated stats*/
     font-size: 3rem;
     font-family: Comic Sans MS;
 }
@@ -112,7 +115,7 @@ body {
 
 .front {
     background-size: cover;
-    background-position-y: 65%;
+    background-position: center;
     height: 100%;
     width: 100%;
     box-shadow: 2px 2px 3px 2px rgba(251, 34, 14, 0.465);
@@ -137,23 +140,21 @@ body {
     border: 5px groove rgba(28,110,164,0.86);
     height: 50%;
     width: 50%;
-    top: 20%;
+    top: 25%;
     left: 20%;
     position: absolute;
     z-index: 99;
 }
 
 .retry {
-    height: 6%;
-    width: 15%;
+ padding: 1vw;
+}
+
+.retry-container{
     top: 5%;
     left: 38%;
     position: absolute;
     background-color: cadetblue;
-    text-align: center;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
     box-shadow: 0 0 100px rgba(100, 251, 13, 0.993);
     border: 5px groove rgba(28,110,164,0.86);
     border-radius: 50%;
