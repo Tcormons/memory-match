@@ -53,14 +53,12 @@ function cardFlip(event) {
     // check for double click on same firstCard
     if (firstCardClicked.is(secondCardClicked)) {
       secondCardClicked = null;
-      console.log('You need to pick a second card');
       return;
     }
   }
 
   // Match
   if (firstCardCompare === secondCardCompare) {
-    console.log("You have a match");
     $('.card').unbind('click');
     setTimeout(removeCompletedPair, 300);
     attempts++;
@@ -123,8 +121,9 @@ function displayStats() {
 }
 
 function displayGameOver() {
-  var retry = $('<div>').addClass('retry')
-  retry.append('<div>').text("Retry");
+  var text = $('<div>').addClass('retry').text('Retry');
+  var retry = $('<div>').addClass('retry-container');
+  retry.prepend(text);
   $('.container').prepend(retry);
   var modal = $('<div>').addClass('modal');
   $('.container').prepend(modal);
