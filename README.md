@@ -22,7 +22,7 @@ Try the working version at: https://memorymatch.tomascormons.tech
 ## Example 
 
 (./assets/images/examples/Screen Recording 2019-12-16 at 14.51.47.mov)
-(./assets/images/examples/Screen Shot 2019-12-16 at 14.52.17.png)
+[./assets/images/examples/Screen Shot 2019-12-16 at 14.52.17.png]
 
 
 Maintained by `tcormons` 
