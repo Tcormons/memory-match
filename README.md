@@ -11,7 +11,7 @@ Desktop Oriented
 - CSS3
 
 ## DEMO
-Try the working version at: [memorymatch.tomascormons.tech]
+Try the working version at: (memorymatch.tomascormons.tech)
 
 Work in progress...
 
