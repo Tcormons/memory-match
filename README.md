@@ -13,6 +13,5 @@ Desktop Oriented
 ## DEMO
 Try the working version at: https://memorymatch.tomascormons.tech
 
-Work in progress...
 
 Maintained by `tcormons` 
