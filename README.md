@@ -21,6 +21,6 @@ Try the working version at: https://memorymatch.tomascormons.tech
 
 ## Example
 
-(./assets/images/example/gameBoardImage.png)
+![MemoryMatch](./assets/images/example/gameBoardImage.png)
 
 Maintained by `tcormons`
