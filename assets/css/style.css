@@ -162,6 +162,10 @@ body {
 }
 
 @media (max-width: 576px) {
+    body{
+        width: 100vw;
+    }
+
     .display {
         display: inline-block;
     }
