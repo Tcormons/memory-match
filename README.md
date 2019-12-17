@@ -1,7 +1,7 @@
 # memory-match
 A javascript memory match game theme from Rick and Morty
 
-Desktop Oriented
+Desktop Oriented && Mobile Adaptive 
 
 ## Technologies Used
 
