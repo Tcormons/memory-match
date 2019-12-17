@@ -141,6 +141,7 @@ function retryGame() {
 
   $('.modal').remove();
   $('.retry').remove();
+  $('.retry-container').remove();
   randomLocation();
 }
 
