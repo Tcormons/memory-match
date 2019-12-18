@@ -122,6 +122,10 @@ function displayGameOver() {
   var modal = $('<div>').addClass('modal');
   $('.container').prepend(modal);
 
+  $('.back-card').addClass('opacity', 0);
+  $('.card').removeClass('disappear');
+  $('.row').removeClass('hidden');
+
   $('.retry').on('click', retryGame);
 }
 
