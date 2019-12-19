@@ -133,7 +133,7 @@ body {
     background-image: url('../images/victory.jpg');
     border-radius: 30%;
     background-size: cover;
-    background-position: center center;
+    background-position-y: 20%;
     box-shadow: 0 0 100px rgba(100, 251, 13, 0.993);
     border: 5px solid rgba(28, 110, 164, 0.86);
     height: 50%;
