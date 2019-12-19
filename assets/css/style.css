@@ -208,3 +208,15 @@ body {
         font-size: 1rem;
     }
 }
+
+@media (max-width: 875px){
+    .label{
+        font-size:1.5rem;
+    }
+}
+
+@media (max-height: 620px){
+    .label{
+        font-size:1rem;
+    }
+}
