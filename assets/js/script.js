@@ -151,6 +151,7 @@ function randomLocation() {
     gallery[index] = gallery[randomNumber];
     gallery[randomNumber] = tempNumber;
   }
+  var newRow = $('<row>').addClass('row');
 
   for (var displayIndex = 0; displayIndex < gallery.length; displayIndex++) {
     var string = gallery[displayIndex];
@@ -159,10 +160,6 @@ function randomLocation() {
     secondNewDiv.css('background-image', 'url(' + string + ')');
     var newDiv = $('<div>').addClass('card');
     var firstNewDiv = $('<div>').addClass('back-card');
-
-    if (displayIndex === 0 || displayIndex === 6 || displayIndex === 12) {
-      var newRow = $('<row>').addClass('row');
-    }
 
     newDiv.append(firstNewDiv);
     newDiv.append(secondNewDiv);
