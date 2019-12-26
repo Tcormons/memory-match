@@ -28,7 +28,7 @@ body {
     display: flex;
     height: 80vh;
     width: 100vw;
-    background-image: url('../images/background.png');
+    background-image: url('../images/MeSeeksBackground.jpg');
     background-size: cover;
     background-position: bottom;
     background-position-y: 70%;
@@ -93,7 +93,7 @@ body {
 .card {
     height: 29%;
     width: 14%;
-    margin: 1% 1%;
+    margin: 1% 0% 0% 1%;
     position: relative;
     cursor: pointer;
 }
@@ -175,7 +175,7 @@ body {
         line-height: 40px;
     }
     .row {
-        margin-left: 2%;
+        margin-left: 10%;
         margin-top: 2%;
     }
     .card {
@@ -214,6 +214,9 @@ body {
     .secondary_container {
         display: inline-block;
         margin: 0;
+    }
+    .card {
+        width: 27%;
     }
     .stats {
         vertical-align: top;
