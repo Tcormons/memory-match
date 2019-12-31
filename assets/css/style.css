@@ -175,7 +175,7 @@ body {
         line-height: 40px;
     }
     .row {
-        margin-left: 10%;
+        margin-left: 3%;
         margin-top: 2%;
     }
     .card {
@@ -184,6 +184,13 @@ body {
     }
     .aside {
         width: 25%;
+    }
+    .retry{
+        top: 6%;
+        left: 36%;
+    }
+    .modal {
+        top: 37%;
     }
 }
 
@@ -216,7 +223,9 @@ body {
         margin: 0;
     }
     .card {
-        width: 27%;
+        width: 30%;
+        height: 14%;
+        margin: 1%;
     }
     .stats {
         vertical-align: top;
